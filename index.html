@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+<head>
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<meta charset="utf-8">
+<title>highputsounds.in</title>
+<script src="js/jquery-2.1.4.min.js" type="text/javascript"></script> 
+
+<!--move to top start--> 
+
+<script type="text/javascript" src="js/move-top.js"></script> 
+<script type="text/javascript" src="js/easing.js"></script> 
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script> 
+
+<!--move to top end--> 
+<!--menu toggle--> 
+<script>
+		$(document).ready(function(){
+			$(".toggle").click(function(){
+			$(".menu2").slideToggle()	
+			})
+		})
+	</script> 
+<!--menu toggle end--> 
+<!--offer start--> 
+
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
+
+var slideImages = document.querySelectorAll('.slide'),
+    dirRight = document.getElementById('dir-control-right'),
+    dirLeft = document.getElementById('dir-control-left'),
+    current = 0;
+
+function jsActive(){
+    for(var i = 0; i < slideImages.length; i++){
+        slideImages[i].classList.add('slider-active');
+    }  
+}
+
+		function reset(){
+    for(var i = 0; i < slideImages.length; i++){
+        slideImages[i].classList.remove('slide-is-active');
+    }
+}
+
+function startSlide(){
+    reset();
+    slideImages[0].classList.add('slide-is-active');
+    setTimeout(function() {
+        for(var i = 0; i < slideImages.length; i++){
+            slideImages[i].classList.add('slide-transition');
+        }
+    }, 20);
+        
+
+}
+
+function slideLeft(){
+    reset();
+    slideImages[current - 1].classList.add('slide-is-active');
+    current--;
+}
+
+function slideRight(){
+    reset();
+    slideImages[current + 1].classList.add('slide-is-active');
+    current++;
+}
+
+dirLeft.addEventListener('click', function(){
+    if(current === 0){
+        current = slideImages.length;
+    }
+    slideLeft();
+})
+
+dirRight.addEventListener('click', function(){
+    if(current === slideImages.length-1){
+        current = -1;
+    }
+    slideRight();
+})
+
+jsActive();
+startSlide();
+
+
+});
+</script> 
+
+<!--offer end-->
+
+</head>
+<body>
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a> 
+<script type="text/javascript">
+	$(document).ready(function() {
+		$().UItoTop({ easingType: 'easeOutQuart' });
+	});
+</script> 
+
+<!--to top-->
+
+<div class="container-fluid header">
+  <div class="toggle"><img src="image/toggle.png"></div>
+  <div class="container">
+    <div class="col-3"><img src="image/logo.png" class="img-fluid"></div>
+    <div class="col-8 menu"> <a href="#header" class="page-scroll scroll">HOME</a> <a href="#about" class="page-scroll scroll">ABOUT</a> <a href="#offerzone" class="page-scroll scroll">OFFERZONE</a> <a href="#store" class="page-scroll scroll">STORE</a> <a href="#support" class="page-scroll scroll">SUPPORT</a> </div>
+    <div class="cl"></div>
+    <div class="menu2"> <a href="#header" class="page-scroll scroll">HOME</a> <a href="#about" class="page-scroll scroll">ABOUT</a> <a href="#offerzone" class="page-scroll scroll">OFFERZONE</a> <a href="#store" class="page-scroll scroll">STORE</a> <a href="#support" class="page-scroll scroll">SUPPORT</a>
+      <div class="cl"></div>
+    </div>
+  </div>
+</div>
+<!--header-end-->
+
+<div class="container-fluid" id="header"> <img src="image/banner main.jpg" class="img-fluid"> </div>
+<div class="cl"></div>
+<!--banner-end-->
+
+<div class="container-fluid" id="about">
+  <div class="container about">
+    <div class="col-4 abth1"><img src="image/abtheadphone2.png" class="img-fluid"></div>
+    <div class="col-8 abttext">SIGNATURE SOUND
+      <p>Major IV delivers the signature HIGH-PUT sound that you’ve come to expect. 
+        60 years of knowledge is packed intoMajor IV for an explosive sound. 
+        Custom-tuned dynamic drivers deliver roaring bass,smooth mids and 
+        brilliant treble for a rich,unrivalled sound that you’ll never want to turn off.</p>
+    </div>
+    <div class="cl"></div>
+    <div class="col-8 abttext2">ICONIC DESIGN
+      <p> Major IV combines enhanced usability with classic HIGH-PUT elements for a design
+        that is both iconic and innovative. he new fold clip means that Major IV folds away into
+        an even more compact size and the ear caps are protected from too much wear and tear.
+        It features the tactile and efficient control knob, textured black vinyl and Marshall script, 
+        as well as the rugged durability that’s necessary for the anarchy of everyday life.</p>
+    </div>
+    <div class="col-4 abth2"><img src="image/abtheadphone1.png" class="img-fluid"></div>
+    <div class="cl"></div>
+  </div>
+</div>
+<!--about-end-->
+
+<div class="wrap"  id="offerzone">
+  <div id="dir-control-left" class="dir-control"><i class="fa fa-angle-left fa-5x" aria-hidden="true"></i> </div>
+  <div id="slider">
+    <div class="slide slide1">
+      <div class="slide-content"> <span><img src="image/offers3.jpg" class="img-fluid"></span> </div>
+    </div>
+    <div class="slide slide2">
+      <div class="slide-content"> <span><img src="image/offers2.jpg" class="img-fluid"></span> </div>
+    </div>
+    <div class="slide slide3">
+      <div class="slide-content"> <span><img src="image/offers1.jpg" class="img-fluid"></span> </div>
+    </div>
+  </div>
+  <div id="dir-control-right" class="dir-control" clas="img-fluid"><i class="fa fa-angle-right fa-5x" aria-hidden="true"></i> </div>
+</div>
+
+<!--offer-end-->
+
+<div class="container-fluid str" id="store" >
+  <div class="container store">
+    <div class="col-3 buy"> <img src="image/strheadphone1.png" class="img-fluid">
+      <h2>HPT-110</h2>
+      <p>Make Game Sense</p>
+      <div class="box">BUY NOW</div>
+    </div>
+    <div class="col-3 buy"> <img src="image/strheadphone2.png" class="img-fluid">
+      <h2>HPT-230</h2>
+      <p>Make Kids Comfortable</p>
+      <div class="box">BUY NOW</div>
+    </div>
+    <div class="col-3 buy"> <img src="image/strheadphone3.png" class="img-fluid">
+      <h2>HPT-120</h2>
+      <p>The Black Beast</p>
+      <div class="box">BUY NOW</div>
+    </div>
+    <div class="col-3 buy"> <img src="image/strheadphone4.png" class="img-fluid">
+      <h2>HPT-730</h2>
+      <p>The Unique Plizz</p>
+      <div class="box">BUY NOW</div>
+    </div>
+    <div class="cl"></div>
+  </div>
+  <div class="container store2">
+    <div class="col-3 buy"> <img src="image/strheadphone5.png" class="img-fluid">
+      <h2>HPT-333</h2>
+      <p>Light Weigh Sleeky Desig</p>
+      <div class="box">BUY NOW</div>
+    </div>
+    <div class="col-3 buy"> <img src="image/strheadphone6.png" class="img-fluid">
+      <h2>HPT-630</h2>
+      <p>Feel The Vintage</p>
+      <div class="box">BUY NOW</div>
+    </div>
+    <div class="col-3 buy"> <img src="image/strheadphone7.png" class="img-fluid">
+      <h2>HPT-440</h2>
+      <p>Special blue Edition</p>
+      <div class="box">BUY NOW</div>
+    </div>
+    <div class="col-3 buy"> <img src="image/strheadphone8.png" class="img-fluid">
+      <h2>HPT-630s</h2>
+      <p>Vintage Crown</p>
+      <div class="box">BUY NOW</div>
+    </div>
+    <div class="cl"></div>
+  </div>
+</div>
+
+<!--store-end-->
+
+<div class="container-fluid contact" id="support">
+  <div class="container" id="contact">
+    <div class="col-6">
+      <h3> Contacts </h3>
+      <p><span class="para">Address : </span> 582, Chicago tower, Thrissur.</p>
+      <p><span class="para">Phones : </span> +91 8606131849</p>
+      <p><span class="para">Hours : </span> 7 Days a week from 9.00 am to 7.00 pm</p>
+      <p><span class="para">E-mail : </span> ashiashif639@gmail.com</p>
+      <p> <img src="image/f.png" class="soc"> <img src="image/g.png" class="soc"> <img src="image/tw.png" class="soc"></p>
+    </div>
+    <div class="col-6">
+      <h3> Contact Form </h3>
+      <form action="#" method="post" name="feedback">
+        <input type="text" name="t1" placeholder="First name" required class="input">
+        <input type="text" name="t2" placeholder="Last name" required class="input">
+        <input type="email" name="t3" placeholder="E-Mail" required class="input">
+        <textarea name="t4" rows="5" placeholder="Message..." class="input"></textarea>
+        <input type="submit" value="Send" class="submit">
+      </form>
+    </div>
+    <div class="cl"></div>
+  </div>
+</div>
+<!--contact end-->
+
+<div class="container-fluid footer"> HighPut Official &copy; 2023. All Rights Reserved
+  <div class="cl"></div>
+</div>
+</body>
+</html>
